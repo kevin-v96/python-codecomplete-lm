@@ -12,7 +12,7 @@ So I used the Python [tokenizer](https://huggingface.co/huggingface-course/code-
 ### Second model: DeepSeek Coder 1.3B Parameter-efficient fine-tune
 The [evalplus](https://evalplus.github.io/leaderboard.html) leaderboard has a list of the best current LLMs for code. For our size requirements (close to ~1B), the DeepSeek Coder 1.3B base model was ideal. I followed the steps given [here](https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html) to fine-tune models in a Parameter-efficient way using methods like LoRA (Low Rank Adapters that are aligned with and trained instead of the model weights, which are frozen) and QLoRA (LoRA that works on Quantized LLMs, like those loaded in 4bits with bitsandbytes). 
 
-### Third model: Written from scratch in PyTorch
+### Third model: Decoder-only Transformer from scratch in PyTorch
 I wrote this model in PyTorch using a standard decoder-only Transformer architecture for generation. 
 
 ## Eval
@@ -28,3 +28,5 @@ I wrote this model in PyTorch using a standard decoder-only Transformer architec
 - https://colab.research.google.com/drive/135ced7oHytdxu3N2DNe1Z0kqjyYIkDXp?usp=sharing
 - https://github.com/huggingface/notebooks/blob/main/transformers_doc/en/training.ipynb
 - https://huggingface.co/docs/transformers/training
+- https://cameronrwolfe.substack.com/p/decoder-only-transformers-the-workhorse
+- https://medium.com/@akriti.upadhyay/building-custom-gpt-with-pytorch-59e5ba8102d4 
