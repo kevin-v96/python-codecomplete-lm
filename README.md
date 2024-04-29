@@ -29,4 +29,5 @@ I wrote this model in PyTorch using a standard decoder-only Transformer architec
 - https://github.com/huggingface/notebooks/blob/main/transformers_doc/en/training.ipynb
 - https://huggingface.co/docs/transformers/training
 - https://cameronrwolfe.substack.com/p/decoder-only-transformers-the-workhorse
-- https://medium.com/@akriti.upadhyay/building-custom-gpt-with-pytorch-59e5ba8102d4 
+- https://pytorch.org/tutorials/beginner/transformer_tutorial.html 
+- https://wandb.ai/matt24/vit-snacks-sweeps/reports/Hyperparameter-Search-for-HuggingFace-Transformer-Models--VmlldzoyMTUxNTg0 
