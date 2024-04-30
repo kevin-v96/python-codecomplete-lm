@@ -1,0 +1,8 @@
+pytorch
+accelerate
+peft
+bitsandbytes
+transformers
+trl
+wandb
+huggingface_hub
