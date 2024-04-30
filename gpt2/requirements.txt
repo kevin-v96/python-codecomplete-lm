@@ -1,0 +1,6 @@
+wandb 
+huggingface_hub 
+transformers 
+datasets 
+accelerate 
+bitsandbytes
