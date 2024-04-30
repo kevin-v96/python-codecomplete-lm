@@ -31,6 +31,9 @@ The quantization saw some drop in quality, likely dues to some issues with misma
 You can find the process I followed for finetuning including the hyperparameter sweep in the Jupyter Notebook. 
 Alternatively, you can fine a report about the same (including training and eval plots) [here](https://api.wandb.ai/links/kevinv3796/nzt0ndnq).
 
+## Using the model
+Run `pip install -r requirements.txt` to install the required modules.
+
 ### Tuning your own
 If you want to tune your own model, you can run `python train.py`. The default number of samples from the above dataset used
 to finetune the model is 1000, but you can provide your own number with `python train.py -n <number of samples>`
