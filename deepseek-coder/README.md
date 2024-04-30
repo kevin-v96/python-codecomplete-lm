@@ -1,5 +1,5 @@
 # Finetuned DeepSeek-Coder-1.3B
-This is a PEFT (Parameter-efficient Fine-Tune) of the DeepSeek-Coder-1.3B model on the [ArtifactAI/arxiv_python_research_code](https://huggingface.co/datasets/ArtifactAI/arxiv_python_research_code) dataset.
+This is a PEFT (Parameter-efficient Fine-Tune) of the [DeepSeek-Coder-1.3B model](https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base) on the [ArtifactAI/arxiv_python_research_code](https://huggingface.co/datasets/ArtifactAI/arxiv_python_research_code) dataset.
 
 ### Final Model
 You can fine the model I finetuned and uploaded [here](https://huggingface.co/MadMarx37/deepseek-coder-1.3b-python-peft).
