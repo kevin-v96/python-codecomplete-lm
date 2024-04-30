@@ -10,7 +10,22 @@ Calculating memory usage (with some caveats) can be done with the equation $`mem
 In our case, that is $`memory_usage = 1350000000 * 2`$ (since 16bits/param = 16 / 8 = 2 bytes/param)
 
 Thus, our the base model needs $`2700000000 bytes / (1024^3 bytes/gigabyte) =~ 2.5GBs`$
-This is usually for inference, and for training, gradients and optimisers mean we have overhead that requires more memory.
+This is usually for inference, and for training, gradients and optimisers mean we have overhead that requires more memory. Consider 3-4x this for training since we're on the lower end of model size.
+
+### Quantization
+quantize.ipynb has code to quantize the model to the q5_k_m (5-bit) model, which is easier to use with consumer GPUs, requiring a maximum of 3.5GB VRAM (see [here](https://huggingface.co/TheBloke/deepseek-coder-1.3b-base-GGUF))
+
+Quantized models in the GGUF format can be loaded and used in Python as such:
+```
+from ctransformers import AutoModelForCausalLM
+
+# Set gpu_layers to the number of layers to offload to GPU. Set to 0 if no GPU acceleration is available on your system.
+llm = AutoModelForCausalLM.from_pretrained("MadMarx37/deepseek-coder-1.3b-python-peft-GGUF", model_file="deepseek-coder-1.3b-python-peft.Q5_K_M.gguf", model_type="deepseek", gpu_layers=50)
+
+print(llm("AI is going to"))
+```
+
+The quantization saw some drop in quality, likely dues to some issues with mismatch of special tokens in the tokenizer. In the interest of time, I've kept it as an error to rectify later.
 
 ### Finetuning metrics
 You can find the process I followed for finetuning including the hyperparameter sweep in the Jupyter Notebook. 
