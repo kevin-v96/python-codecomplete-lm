@@ -1,5 +1,5 @@
 # python-codecomplete-lm
-A small LM for next token prediction in Python
+Some small LMs (less than or around 1B parameters) for next token prediction in Python
 
 ## Models
 Models I tried (you can find instructions about each in their own folders):
