@@ -210,6 +210,11 @@ y = np.random.randn(100)
 - This repo
 - WandB report on finetuning the DeepSeek model: https://api.wandb.ai/links/kevinv3796/nzt0ndnq 
 
+## TODO
+- [x] Fine-tune coding model
+- [x] Pre-train a pre-config HF model
+- [ ] Train a model from scratch in PyTorch/x-transformers
+
 ## References
 - https://evalplus.github.io/leaderboard.html
 - https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base
