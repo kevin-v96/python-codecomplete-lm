@@ -24,8 +24,6 @@ I wrote this model in PyTorch using a standard decoder-only Transformer architec
 - https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base
 - https://huggingface.co/learn/nlp-course/chapter7/6
 - https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html
-- https://unsloth.ai/blog/llama3
-- https://colab.research.google.com/drive/135ced7oHytdxu3N2DNe1Z0kqjyYIkDXp?usp=sharing
 - https://github.com/huggingface/notebooks/blob/main/transformers_doc/en/training.ipynb
 - https://huggingface.co/docs/transformers/training
 - https://cameronrwolfe.substack.com/p/decoder-only-transformers-the-workhorse
