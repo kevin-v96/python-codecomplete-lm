@@ -30,3 +30,7 @@ I wrote this model in PyTorch using a standard decoder-only Transformer architec
 - https://pytorch.org/tutorials/beginner/transformer_tutorial.html 
 - https://wandb.ai/matt24/vit-snacks-sweeps/reports/Hyperparameter-Search-for-HuggingFace-Transformer-Models--VmlldzoyMTUxNTg0
 - https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html 
+- https://github.com/lucidrains/x-transformers 
+- https://huggingface.co/docs/datasets/en/use_with_pytorch 
+- https://ai.plainenglish.io/creating-and-exploring-gpt-from-scratch-ffe84ac415a9
+ 
