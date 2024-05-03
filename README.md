@@ -13,11 +13,202 @@ To start, I trained a small GPT2 model (~124M parameters) from scratch using the
 So I used the tokenizer from the above model. This took a few hours off our total training time. Then I followed the standard training procedure outlined in the tutorial with different sizes of data, trying different dataset sizes to see what's realistic to train on a free Google Clab and get decent results.
 
 ### Third model: Decoder-only Transformer from scratch in PyTorch
-I wrote this model in PyTorch using a standard decoder-only Transformer architecture for generation. 
+I tried a few models completely from scratch (in PyTorch and using some libraries like x-transformers) but have left them as a to-do for a lack of time. 
 
 ## Eval
+Here are some examples of vibes-based evals from the two models:
+
+## DeepSeek:
+### Example 1
+Prompt:
+```
+# Load a dataset using pandas
+import pandas as pd
+data = pd.read_csv('data.csv')
+
+# Display the first few rows of the dataset
+```
+
+DeepSeek base model output:
+```
+# Load a dataset using pandas
+import pandas as pd
+data = pd.read_csv('data.csv')
+
+# Display the first few rows of the dataset
+data.head()
+
+# Display the last few rows of the dataset
+data.tail()
+
+# Display the number of rows and columns in the dataset
+data.shape
+
+# Display the data types of each column
+data.dtypes
+
+# Display the summary statistics of the dataset
+data.describe()
+
+# Display the number of unique values in each column
+data.nunique()
+
+# Display the number of missing values in each column
+data.isnull().sum()
+
+# Display the number of unique values in each column
+data.nunique()
+
+# Display the number of missing values in each column
+data.isnull().sum()
+
+# Display the number of unique values in each column
+data.nunique()
+
+# Display the number of missing values in each column
+data.isnull().sum()
+
+# Display the number of unique values in each column
+data.nunique()
+
+# Display the number of missing values in each column
+data.is
+```
+
+DeepSeek Finetuned Model output:
+```
+# Load a dataset using pandas
+import pandas as pd
+data = pd.read_csv('data.csv')
+
+# Display the first few rows of the dataset
+data.head(10)
+
+# Get information about the dataset
+data.info()
+
+# Get the index
+for i in data.index:
+    print(i)
+
+# Get the number of observations
+n_obs = data.shape[0]
+print(n_obs)
+
+# Get the number of columns
+n_cols = data.shape[1]
+print(n_cols)
+
+# Get the list of columns
+cols = data.columns
+print(cols)
+
+# Select a single column
+sel_col = data['Country']
+print(sel_col)
+
+# Select multiple columns
+sel_cols = data[['Country','Age']]
+print(sel_cols)
+
+# Select rows
+# You can select by index, or by passing a list of indices
+# By index, you can select by country using the following example
+country_df = data.loc[data['Country']=='
+```
+
+### Example 2
+
+Prompt:
+```
+# Split data into train and test sets
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize and train a machine learning model (e.g., Random Forest)
+
+```
+DeepSeek Base model output:
+
+```
+# Split data into train and test sets
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize and train a machine learning model (e.g., Random Forest)
+
+# Fit the model to the training data
+
+# Make predictions on the test data
+
+# Evaluate the model's performance
+
+# Use the model to make predictions on new data
+<jupyter_output>
+<empty_output>
+
+```
+
+DeepSeek Finetuned model output:
+
+```
+
+# Split data into train and test sets
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize and train a machine learning model (e.g., Random Forest)
+
+# Split data into features and target variable
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Initialize an empty list to store accuracy scores
+accuracies = []
+
+# Iterate over different values of the regularization parameter for penalization
+for alpha in [0.01, 0.1, 1, 10, 100, 1000]:
+    # Instantiate a logistic regression model
+    logreg = LogisticRegression(C=alpha, random_state=42)
+    
+    # Fit logistic regression to the training data
+    logreg.fit(X
+
+```
+### GPT2 examples
+Prompt:
+```
+# create some data
+x = np.random.randn(100)
+y = np.random.randn(100)
+
+# create scatter plot with x, y
+```
+
+Output:
+```
+# create some data
+x = np.random.randn(100)
+y = np.random.randn(100)
+
+# create scatter plot with x, y
+data = np.random.randn(100)
+#
+```
+Prompt:
+```
+# create some data
+x = np.random.randn(100)
+y = np.random.randn(100)
+
+# create dataframe from x and y
+```
+
 
 ## Outputs
+- https://huggingface.co/MadMarx37/deepseek-coder-1.3b-python-peft
+- https://huggingface.co/MadMarx37/python-gpt2
+- This repo
+- WandB report on finetuning the DeepSeek model: https://api.wandb.ai/links/kevinv3796/nzt0ndnq 
 
 ## References
 - https://evalplus.github.io/leaderboard.html
