@@ -6,10 +6,10 @@ You can fine the model I finetuned and uploaded [here](https://huggingface.co/Ma
 
 ### Hardware requirements
 The original DeepSeek-Coder model is FP16, which means it is half-precision. It has 1.35B parameters.
-Calculating memory usage (with some caveats) can be done with the equation $`memory_usage = num_parameters * bytes_per_param`$
-In our case, that is $`memory_usage = 1350000000 * 2`$ (since 16bits/param = 16 / 8 = 2 bytes/param)
+Calculating memory usage (with some caveats) can be done with the equation `memory_usage = num_parameters * bytes_per_param`
+In our case, that is `memory_usage = 1350000000 * 2` (since `16bits/param = 16 / 8 = 2 bytes/param`)
 
-Thus, our the base model needs $`2700000000 bytes / (1024^3 bytes/gigabyte) =~ 2.5GBs`$
+Thus, our the base model needs `2700000000 bytes / (1024^3 bytes/gigabyte) =~ 2.5GBs`
 This is usually for inference, and for training, gradients and optimisers mean we have overhead that requires more memory. Consider 3-4x this for training since we're on the lower end of model size.
 
 ### Quantization
