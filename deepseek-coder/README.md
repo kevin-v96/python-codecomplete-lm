@@ -25,7 +25,7 @@ llm = AutoModelForCausalLM.from_pretrained("MadMarx37/deepseek-coder-1.3b-python
 print(llm("AI is going to"))
 ```
 
-The quantization saw some drop in quality, likely dues to some issues with mismatch of special tokens in the tokenizer. In the interest of time, I've kept it as an error to rectify later.
+The quantization saw a little drop in generation quality, possibly due to some issues with mismatch of special tokens in the tokenizer. In the interest of time, I've kept it as an error to rectify later.
 
 ### Finetuning metrics
 You can find the process I followed for finetuning including the hyperparameter sweep in the Jupyter Notebook. 
