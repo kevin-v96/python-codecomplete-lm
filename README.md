@@ -20,7 +20,7 @@ Here are some examples of vibes-based evals from the two models:
 
 ## DeepSeek:
 <details>
-  <summary>### Example 1</summary>
+  <summary><h3> Example 1 </h3></summary>
 
 Prompt:
 ```
@@ -121,7 +121,7 @@ country_df = data.loc[data['Country']=='
 </details>
 
 <details>
-  <summary>### Example 2</summary>
+  <summary><h3> Example 2 </h3></summary>
 
 Prompt:
 ```
@@ -183,7 +183,7 @@ for alpha in [0.01, 0.1, 1, 10, 100, 1000]:
 
 
 <details>
-  <summary>### GPT2 examples</summary>
+  <summary> <h3> GPT2 examples </h3> </summary>
 
 Prompt:
 ```
