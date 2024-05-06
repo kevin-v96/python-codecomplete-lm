@@ -184,7 +184,7 @@ for alpha in [0.01, 0.1, 1, 10, 100, 1000]:
 ## GPT2:
 
 <details>
-  <summary> <h3> GPT2 examples </h3> </summary>
+  <summary> <h3> Examples </h3> </summary>
 
 Prompt:
 ```
@@ -212,6 +212,17 @@ x = np.random.randn(100)
 y = np.random.randn(100)
 
 # create dataframe from x and y
+```
+
+Output:
+```
+# create some data
+x = np.random.randn(100)
+y = np.random.randn(100)
+
+# create dataframe from x and y
+def make_df(df):
+    df.to_csv(
 ```
 
 </details>
