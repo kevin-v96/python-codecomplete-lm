@@ -19,7 +19,9 @@ I trained a model written from scratch in PyTorch, which you can find in the `py
 Here are some examples of vibes-based evals from the two models:
 
 ## DeepSeek:
-### Example 1
+<details>
+  <summary>### Example 1</summary>
+
 Prompt:
 ```
 # Load a dataset using pandas
@@ -116,8 +118,10 @@ print(sel_cols)
 # By index, you can select by country using the following example
 country_df = data.loc[data['Country']=='
 ```
+</details>
 
-### Example 2
+<details>
+  <summary>### Example 2</summary>
 
 Prompt:
 ```
@@ -174,7 +178,13 @@ for alpha in [0.01, 0.1, 1, 10, 100, 1000]:
     logreg.fit(X
 
 ```
-### GPT2 examples
+
+</details>
+
+
+<details>
+  <summary>### GPT2 examples</summary>
+
 Prompt:
 ```
 # create some data
@@ -203,6 +213,7 @@ y = np.random.randn(100)
 # create dataframe from x and y
 ```
 
+</details>
 
 ## Outputs
 - https://huggingface.co/MadMarx37/deepseek-coder-1.3b-python-peft
