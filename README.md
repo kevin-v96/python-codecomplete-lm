@@ -13,7 +13,7 @@ To start, I trained a small GPT2 model (~124M parameters) from scratch using the
 So I used the tokenizer from the above model. This took a few hours off our total training time. Then I followed the standard training procedure outlined in the tutorial with different sizes of data, trying different dataset sizes to see what's realistic to train on a free Google Clab and get decent results.
 
 ### Third model: Decoder-only Transformer from scratch in PyTorch
-I trained a model written from scratch in PyTorch, which you can find in the `pytorch-xtransformers` folder. The current run in the notebook is quite naive and doesn't give great results, so I am training a better model, but I thought I would include it here just for the sake of juxtaposition.
+I trained a model written from scratch in PyTorch, which you can find in the `pytorch` folder. The current run in the notebook is quite naive and doesn't give great results, so I am training a better model, but I thought I would include it here just for the sake of juxtaposition. I've also added training code using PyTorch Lightning that I'm going to use to train the next iteration of this model and will add the stats for the same soon.
 
 ## Eval
 Here are some examples of vibes-based evals from the two models:
@@ -214,6 +214,7 @@ y = np.random.randn(100)
 - [x] Fine-tune coding model
 - [x] Pre-train a pre-config HF model
 - [x] Train a model from scratch in PyTorch/x-transformers
+- [ ] Add PyTorch Lightning Training run
 
 ## References
 - https://evalplus.github.io/leaderboard.html
