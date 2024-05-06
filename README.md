@@ -237,7 +237,8 @@ def make_df(df):
 - [x] Fine-tune coding model
 - [x] Pre-train a pre-config HF model
 - [x] Train a model from scratch in PyTorch/x-transformers
-- [ ] Add PyTorch Lightning Training run
+- [x] Add PyTorch Lightning Training code
+- [ ] Add Lightning model training results
 
 ## References
 - https://evalplus.github.io/leaderboard.html
@@ -253,4 +254,6 @@ def make_df(df):
 - https://github.com/lucidrains/x-transformers 
 - https://huggingface.co/docs/datasets/en/use_with_pytorch 
 - https://ai.plainenglish.io/creating-and-exploring-gpt-from-scratch-ffe84ac415a9
+- https://lightning.ai/docs/pytorch/stable/levels/core_skills.html
+
  
