@@ -48,7 +48,7 @@ def collate_fn(batch, max_length):
 
         # Pad input_ids and attention_mask to max_length
         padding_length = max_length - len(input_ids)
-        padded_input_ids = input_ids + [config.eos_token_id] * padding_length
+        padded_input_ids = input_ids + [config.padding_token_id] * padding_length
         padded_attention_mask = attention_mask + [0] * padding_length
 
         input_ids_list.append(padded_input_ids)

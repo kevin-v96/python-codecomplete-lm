@@ -13,7 +13,7 @@ def get_config(eos_token_id, eos_token):
         number_of_heads=4,
         number_of_layers=3,
         dropout_rate=0.1,
-        eos_token_id = eos_token_id,
-        eos_token = eos_token,
+        padding_token_id = eos_token_id,
+        padding_token = eos_token,
     )
     return config
